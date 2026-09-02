@@ -1,0 +1,65 @@
+/* Intentional final overrides for the service-card component. */
+.service-card{isolation:isolate}
+.service-card:after{z-index:-1;background:linear-gradient(180deg,rgba(25,12,8,.08) 18%,rgba(25,12,8,.88) 88%)}
+.service-card.hair{background:url('/assets/bella-hero.png') 73% center/cover}
+.service-card.beauty{background:url('/assets/bella-beauty.png') center/cover}
+.service-card.bridal{background:url('/assets/bella-bridal.png') center/cover}
+.service-card .service-content{margin-top:auto}
+.service-card .service-content h3{margin:0 0 8px}
+.service-card .service-content p{margin:0 0 22px}
+.service-card button{width:100%;display:flex;align-items:center;justify-content:space-between;border:1px solid rgba(255,255,255,.76);background:rgba(255,255,255,.1);color:#fff;padding:14px 15px;text-align:left;font:500 12px var(--sans);letter-spacing:.02em;cursor:pointer;transition:background .2s ease,color .2s ease,transform .2s ease}
+.service-card button:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
+.service-card button span{font-size:12px;letter-spacing:0}
+.service-card button b{float:none;font:500 18px var(--serif)}
+
+/* Mobile-first refinement: no clipped overlays, clear rhythm and thumb-friendly controls. */
+.signature-art>.signature-caption{font-family:var(--serif);font-size:32px;letter-spacing:-.04em;line-height:1.02;margin:-64px 0 0 250px;position:relative;z-index:2;color:#fff;width:230px;padding:18px 20px;background:#382018;box-shadow:0 14px 32px rgba(39,20,12,.2)}
+.signature-caption span,.signature-caption em{display:block}.signature-caption em{color:#ddb47e;font-weight:500}
+
+@media (max-width:720px){
+  html,body{overflow-x:hidden}
+  .hero{min-height:735px;background-position:63% center}
+  .hero-copy{padding-top:112px;padding-bottom:52px}
+  .hero h1{font-size:59px;line-height:.92}
+  .hero-text{font-size:15px;max-width:315px;margin:24px 0 30px}
+  .hero-actions{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+  .hero-actions .button,.hero-actions .text-link{width:100%;min-height:50px;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+  .hero-actions .button{font-size:12px}
+  .hero-actions .button span,.hero-actions .text-link span{margin:0;line-height:1;font-size:18px}
+  .hero-actions .text-link{font-size:12px;padding-bottom:0;line-height:1.3}
+  .hero-foot{padding:16px 0}
+  .intro{padding:82px 0 86px;gap:31px}
+  .intro-copy p,.body-copy,.booking-copy>p,.visit-details p{font-size:14px;line-height:1.7}
+  .services{padding:75px 0 82px}
+  .service-grid{gap:12px}
+  .service-card{min-height:315px;padding:20px}
+  .service-card.beauty{background-position:center 92%}
+  .service-card h3{font-size:34px}
+  .service-card p{font-size:12px;max-width:245px}
+  .service-card button{min-height:47px;padding:12px 13px}
+  .signature{padding:78px 0 85px;gap:37px}
+  .signature-art{padding:0;width:100%}
+  .arch{width:100%;max-width:none;height:min(108vw,420px);padding:11px;border-radius:52vw 52vw 0 0}
+  .arch-image{border-radius:50vw 50vw 0 0;background-position:73% center}
+  .signature-art>.signature-caption{width:auto;margin:12px 0 0;font-size:29px;padding:18px 19px;box-shadow:none}
+  .signature-copy{padding:0}
+  .signature-copy .eyebrow{margin-bottom:16px}
+  .signature-copy .body-copy{margin:22px 0 28px}
+  .mini-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;width:100%;padding-top:21px}
+  .mini-stats div{min-width:0}
+  .mini-stats strong{font-size:24px}
+  .mini-stats span{font-size:8px}
+  .booking{padding:76px 0}
+  .booking-wrap{gap:38px}
+  .booking-form{padding:23px;gap:20px}
+  .booking-form .button.primary{display:flex;align-items:center;justify-content:space-between;min-height:50px;white-space:nowrap;padding:0 16px;font-size:12px;line-height:1}
+  .booking-form .button.primary span{margin:0;font-size:18px;line-height:1}
+  .visit{padding:78px 0;gap:32px}
+}
+
+@media (min-width:721px) and (max-width:1024px){
+  .signature{gap:7%}
+  .signature-caption{margin-left:42%;font-size:28px}
+  .service-card{padding:22px;min-height:370px}
+  .service-card h3{font-size:32px}
+}

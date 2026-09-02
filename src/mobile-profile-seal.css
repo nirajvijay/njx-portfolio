@@ -1,0 +1,5 @@
+@media(max-width:720px){
+  .p-hero-portrait{display:none}
+  .p-hero-copy .p-kicker{padding-right:0}
+  .p-hero-actions .p-quiet-link{padding-bottom:6px}
+}

@@ -1,0 +1,9 @@
+@media(max-width:720px){
+  .p-hero-portrait{width:94px;height:94px;align-self:flex-end;margin:22px 18px -47px 0;border:5px solid var(--p-lime);z-index:3;box-shadow:0 0 0 5px var(--p-ink)}
+  .p-hero-portrait img{transform:scale(1.6);object-position:70% 58%;filter:brightness(1.12) saturate(.96)}
+  .p-hero-portrait figcaption{display:none}
+  .p-hero>.p-signal-card{height:178px;margin:0;padding:19px 16px 15px;grid-template-columns:.78fr 1.22fr;grid-template-rows:22px 1fr;overflow:hidden}
+  .p-hero>.p-signal-card .p-signal-top{padding-right:96px}
+  .p-hero>.p-signal-card p{font-size:28px;line-height:.79;letter-spacing:-.055em}
+  .p-hero>.p-signal-card .p-signal-index{bottom:14px}
+}
