@@ -215,10 +215,7 @@ function SelectedWork() {
 
         <div className="p-projects p-work-page-projects">
           <article className="p-project p-project-ajx"><div className="p-project-meta"><span>01 / PRODUCT</span><span>AJX FITCLUB</span></div><div className="p-project-body"><p className="p-project-label">Building with movement in mind</p><h3>AJX<br />FitClub</h3><p>A technology-led fitness venture shaped around a better member experience and a modern digital presence.</p><span className="p-chip">FOUNDER</span></div><div className="p-project-symbol">A</div></article>
-          <article className="p-project p-project-radar"><div className="p-project-meta"><span>02 / SYSTEMS</span><span>PRIVATE RESEARCH</span></div><div className="p-project-body"><p className="p-project-label">Research before conviction</p><h3>Market<br />systems</h3><p>Exploring reliable data pipelines, automation and decision-support systems through careful, observation-first research.</p><span className="p-chip">PYTHON · DATA · AUTOMATION</span></div><div className="p-grid-art"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></article>
-          <a className="p-project p-project-bella p-project-card-link" href="#bella-concept" aria-label="View Bella Family Salon and Spa concept"><div className="p-project-meta"><span>03 / WEB CONCEPT</span><span>BELLA</span></div><div className="p-project-body"><p className="p-project-label">A stronger first impression for a local business</p><h3>Bella<br />Salon &amp; Spa</h3><p>A branded, mobile-first salon website concept with service discovery and a considered appointment flow.</p><span className="p-project-link">View Bella concept <span>↗︎</span></span></div></a>
-          <article className="p-project p-project-local"><div className="p-project-meta"><span>04 / INITIATIVE</span><span>LOCAL BUSINESS DIGITAL</span></div><div className="p-project-body"><p className="p-project-label">Making local businesses easier to find</p><h3>Digital<br />presence.</h3><p>A growing collection of mobile-first websites and digital entry points for local businesses that deserve a stronger first impression.</p><span className="p-chip">WEB · BRAND · LEAD FLOW</span></div></article>
-          <article className="p-project p-project-rust"><div className="p-project-meta"><span>05 / LEARNING</span><span>RUST</span></div><div className="p-project-body"><p className="p-project-label">Learning by making</p><h3>Build,<br />then teach.</h3><p>Learning Rust through useful projects, clearer thinking and lessons worth carrying forward.</p><span className="p-chip">LEARNING IN PUBLIC</span></div></article>
+          <a className="p-project p-project-bella p-project-card-link" href="#bella-concept" aria-label="View Bella Family Salon and Spa concept"><div className="p-project-meta"><span>02 / WEB CONCEPT</span><span>BELLA</span></div><div className="p-project-body"><p className="p-project-label">A stronger first impression for a local business</p><h3>Bella<br />Salon &amp; Spa</h3><p>A branded, mobile-first salon website concept with service discovery and a considered appointment flow.</p><span className="p-project-link">View Bella concept <span>↗︎</span></span></div></a>
         </div>
       </section>
 
@@ -235,6 +232,10 @@ function App() {
     window.addEventListener('hashchange', updateHash)
     return () => window.removeEventListener('hashchange', updateHash)
   }, [])
+
+  useEffect(() => {
+    if (hash === '#selected-work' || hash === '#bella-concept') window.scrollTo(0, 0)
+  }, [hash])
 
   if (hash === '#selected-work') return <SelectedWork />
   if (hash.startsWith('#bella')) return <BellaConcept />
