@@ -131,6 +131,11 @@ function Portfolio() {
         <div className="p-signal-card"><div className="p-signal-top"><span>NV / SIGNAL</span><span className="p-live"><i /> BUILDING</span></div><div className="p-signal-line"><i /><i /><i /><i /><i /><i /><i /></div><p>Products<br />Systems<br />Experiments</p><span className="p-signal-index">01—04</span></div>
       </section>
 
+      <section className="p-photo-intro" aria-label="Niraj V in the work">
+        <figure><img src="/assets/niraj-portrait.png" alt="Niraj V" /><figcaption>NV / IRL</figcaption></figure>
+        <div><p className="p-kicker">IN THE WORK</p><h2>Ideas become<br /><em>real things.</em></h2><p>Building, testing and learning in public—one useful step at a time.</p></div>
+      </section>
+
       <section className="p-intro p-about" id="about"><div className="p-about-meta"><p className="p-kicker">A LITTLE ABOUT ME</p><span>NIRAJ V / BUILDER</span></div><div className="p-about-content"><h2>I don’t chase<br />a single label.</h2><p>I’m interested in the full distance between an idea and a useful result: understanding the problem, designing the system, building it, testing it, and sharing what I learn along the way.</p></div></section>
 
       <section className="p-work" id="work"><div className="p-section-heading"><div><p className="p-kicker">SELECTED WORK</p><h2>Things I’m<br /><em>bringing to life.</em></h2></div><span>01—04</span></div>
