@@ -19,11 +19,28 @@ const address = 'Kadamkode, NH, near Builtech Greens, Manapullikavu, Palakkad, K
 function BellaConcept() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [experienceMenuOpen, setExperienceMenuOpen] = useState(false)
+  const [selectedExperience, setSelectedExperience] = useState('')
+  const [experienceError, setExperienceError] = useState(false)
+
+  const experiences = [
+    'Haircut & styling',
+    'Hair spa or treatment',
+    'Hair colour or smoothening',
+    'Bridal makeup',
+    'Grooming',
+    'Not sure yet',
+  ]
 
   const goToBooking = () => document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth' })
 
   function submit(e) {
     e.preventDefault()
+    if (!selectedExperience) {
+      setExperienceError(true)
+      setExperienceMenuOpen(true)
+      return
+    }
     setSubmitted(true)
   }
 
@@ -84,7 +101,33 @@ function BellaConcept() {
             {submitted ? <div className="success"><span>✦</span><h3>Thank you.</h3><p>Your appointment request is ready to be followed up by the Bella team.</p><button type="button" onClick={() => setSubmitted(false)}>Make another request</button></div> : <>
               <label>Your name<input required name="name" placeholder="Enter your name" /></label>
               <label>Mobile number<input required name="phone" inputMode="tel" placeholder="Your best contact number" /></label>
-              <label>What would you love today?<select required defaultValue=""><option value="" disabled>Select an experience</option><option>Haircut &amp; styling</option><option>Hair spa or treatment</option><option>Hair colour or smoothening</option><option>Bridal makeup</option><option>Grooming</option><option>Not sure yet</option></select></label>
+              <label className="experience-field">What would you love today?
+                <input type="hidden" name="experience" value={selectedExperience} />
+                <button
+                  className="experience-trigger"
+                  type="button"
+                  aria-haspopup="listbox"
+                  aria-expanded={experienceMenuOpen}
+                  aria-invalid={experienceError}
+                  onClick={() => setExperienceMenuOpen(!experienceMenuOpen)}
+                >
+                  <span>{selectedExperience || 'Select an experience'}</span><b aria-hidden="true">⌄</b>
+                </button>
+                {experienceMenuOpen && <div className="experience-options" role="listbox" aria-label="Choose an experience">
+                  {experiences.map((experience) => <button
+                    type="button"
+                    role="option"
+                    aria-selected={selectedExperience === experience}
+                    key={experience}
+                    onClick={() => {
+                      setSelectedExperience(experience)
+                      setExperienceError(false)
+                      setExperienceMenuOpen(false)
+                    }}
+                  >{experience}</button>)}
+                </div>}
+                {experienceError && <small className="field-error">Please choose an experience.</small>}
+              </label>
               <label>Preferred day<input type="date" name="date" /></label>
               <button className="button primary full" type="submit">Request an appointment <span>↗︎</span></button>
               <small>This demo form does not transmit details. Connect it to Bella’s preferred booking channel before launch.</small>
