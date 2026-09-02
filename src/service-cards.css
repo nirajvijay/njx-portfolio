@@ -11,6 +11,7 @@
 .service-card button:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
 .service-card button span{font-size:12px;letter-spacing:0}
 .service-card button b{float:none;font:500 18px var(--serif)}
+.created-by-njx{font-size:10px;letter-spacing:.11em;color:#e4d2bc!important;text-decoration:none}.created-by-njx strong{font-weight:700;color:#fff}.created-by-njx span{margin-left:5px}
 .brand-mark{display:flex;align-items:center;justify-content:center;line-height:1;padding-bottom:2px}
 .experience-field{grid-column:1/-1;position:relative}
 .experience-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;border:0;border-bottom:1px solid #cfc2b4;background:transparent;color:var(--ink);padding:12px 0 9px;margin-top:4px;font:13px var(--sans);text-align:left;cursor:pointer}
@@ -27,6 +28,7 @@
 
 @media (max-width:720px){
   html,body{overflow-x:hidden}
+  .footer-inner .created-by-njx{display:block;order:3}
   .hero{min-height:735px;background-position:63% center}
   .hero-copy{padding-top:112px;padding-bottom:52px}
   .hero h1{font-size:59px;line-height:.92}

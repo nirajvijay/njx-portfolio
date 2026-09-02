@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import './styles.css'
 import './service-cards.css'
@@ -32,7 +32,7 @@ function BellaConcept() {
     'Not sure yet',
   ]
 
-  const goToBooking = () => document.querySelector('#book')?.scrollIntoView({ behavior: 'smooth' })
+  const goToBooking = () => document.querySelector('#bella-book')?.scrollIntoView({ behavior: 'smooth' })
 
   function submit(e) {
     e.preventDefault()
@@ -46,17 +46,17 @@ function BellaConcept() {
 
   return (
     <main>
-      <section className="hero" id="home">
+      <section className="hero" id="bella-home">
         <nav className="nav shell" aria-label="Main navigation">
-          <a className="brand" href="#home" aria-label="Bella home">
+          <a className="brand" href="#bella-home" aria-label="Bella home">
             <span className="brand-mark">B</span>
             <span>BELLA<small>FAMILY SALON &amp; SPA</small></span>
           </a>
           <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Toggle menu">{menuOpen ? '×' : '☰'}</button>
           <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-            <a href="#experience" onClick={() => setMenuOpen(false)}>The Bella way</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-            <a href="#visit" onClick={() => setMenuOpen(false)}>Visit us</a>
+            <a href="#bella-experience" onClick={() => setMenuOpen(false)}>The Bella way</a>
+            <a href="#bella-services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#bella-visit" onClick={() => setMenuOpen(false)}>Visit us</a>
             <button className="nav-cta" onClick={goToBooking}>Book your visit <span>↗︎</span></button>
           </div>
         </nav>
@@ -67,7 +67,7 @@ function BellaConcept() {
           <p className="hero-text">Hair, spa, colour and bridal beauty—thoughtfully done for everyday confidence and unforgettable occasions.</p>
           <div className="hero-actions">
         <button className="button primary" onClick={goToBooking}>Make an appointment <span>↗︎</span></button>
-            <a className="text-link light" href="#services">Explore experiences <span>↓</span></a>
+            <a className="text-link light" href="#bella-services">Explore experiences <span>↓</span></a>
           </div>
         </div>
         <div className="hero-foot shell">
@@ -76,12 +76,12 @@ function BellaConcept() {
         </div>
       </section>
 
-      <section className="intro shell" id="experience">
+      <section className="intro shell" id="bella-experience">
         <div><p className="eyebrow">MORE THAN AN APPOINTMENT</p><h2>Care, made<br /><em>personal.</em></h2></div>
-        <div className="intro-copy"><p>From a sharp haircut or restorative spa visit to hair colour, grooming and bridal makeup, Bella brings considered care to the looks that matter to you.</p><a className="text-link" href="#visit">Discover Bella <span>↗︎</span></a></div>
+        <div className="intro-copy"><p>From a sharp haircut or restorative spa visit to hair colour, grooming and bridal makeup, Bella brings considered care to the looks that matter to you.</p><a className="text-link" href="#bella-visit">Discover Bella <span>↗︎</span></a></div>
       </section>
 
-      <section className="services" id="services">
+      <section className="services" id="bella-services">
         <div className="shell section-head"><p className="eyebrow">CHOOSE YOUR RITUAL</p><h2>Made for every<br /><em>version of you.</em></h2></div>
         <div className="service-grid shell">
           <article className="service-card hair"><span>01</span><div className="service-content"><h3>Hair &amp; spa</h3><p>Haircuts, styling and restorative spa care for a fresh, confident finish.</p></div><button onClick={goToBooking}><span>Explore hair &amp; spa</span><b>↗︎</b></button></article>
@@ -95,7 +95,7 @@ function BellaConcept() {
         <div className="signature-copy"><p className="eyebrow">THE BELLA SIGNATURE</p><h2>Every detail<br />has a <em>feeling.</em></h2><p className="body-copy">From your consultation to the finishing touch, we make room to listen. Bella’s guests frequently recognise warm service, skilled makeovers and attentive hair care.</p><div className="mini-stats"><div><strong>4.9</strong><span>Google rating</span></div><div><strong>86</strong><span>Google reviews</span></div><div><strong>8 PM</strong><span>Closes daily</span></div></div></div>
       </section>
 
-      <section className="booking" id="book">
+      <section className="booking" id="bella-book">
         <div className="shell booking-wrap"><div className="booking-copy"><p className="eyebrow light">YOUR TIME, RESERVED</p><h2>Let’s make<br />space for <em>you.</em></h2><p>Tell us what you’re thinking about. We’ll help you find the right Bella service and time.</p><a className="call-link" href={`tel:+${phone}`}>Prefer to call? <span>+91 82899 39848</span></a></div>
           <form className="booking-form" onSubmit={submit}>
             {submitted ? <div className="success"><span>✦</span><h3>Thank you.</h3><p>Your appointment request is ready to be followed up by the Bella team.</p><button type="button" onClick={() => setSubmitted(false)}>Make another request</button></div> : <>
@@ -136,9 +136,9 @@ function BellaConcept() {
         </div>
       </section>
 
-      <section className="visit shell" id="visit"><div><p className="eyebrow">COME FIND US</p><h2>See you at<br /><em>Bella.</em></h2></div><div className="visit-details"><p>{address}</p><p>Open daily<br /><strong>10:00 AM — 8:00 PM</strong></p><a className="button outline" target="_blank" rel="noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}>Get directions <span>↗︎</span></a></div></section>
+      <section className="visit shell" id="bella-visit"><div><p className="eyebrow">COME FIND US</p><h2>See you at<br /><em>Bella.</em></h2></div><div className="visit-details"><p>{address}</p><p>Open daily<br /><strong>10:00 AM — 8:00 PM</strong></p><a className="button outline" target="_blank" rel="noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`}>Get directions <span>↗︎</span></a></div></section>
 
-      <footer><div className="shell footer-inner"><a className="brand footer-brand" href="#home"><span className="brand-mark">B</span><span>BELLA<small>FAMILY SALON &amp; SPA</small></span></a><p>Made for beautiful pauses in Palakkad.</p><a href="#home">Back to top ↑</a></div></footer>
+      <footer><div className="shell footer-inner"><a className="brand footer-brand" href="#bella-home"><span className="brand-mark">B</span><span>BELLA<small>FAMILY SALON &amp; SPA</small></span></a><p>Made for beautiful pauses in Palakkad.</p><a className="created-by-njx" href="#top">Created by <strong>NJX</strong> <span>↗︎</span></a><a href="#bella-home">Back to top ↑</a></div></footer>
     </main>
   )
 }
@@ -152,7 +152,7 @@ function Portfolio() {
         <a className="p-wordmark p-njx-wordmark" href="#top" aria-label="NJX home"><span>NJX<small>BUILT BY NIRAJ V</small></span></a>
         <button className="p-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu" aria-expanded={menuOpen}>{menuOpen ? '×' : '☰'}</button>
         <nav className={menuOpen ? 'p-links open' : 'p-links'}>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Work</a>
+          <a href="#selected-work" onClick={() => setMenuOpen(false)}>Work</a>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#now" onClick={() => setMenuOpen(false)}>Now</a>
               <a className="p-contact-link" href="#contact" onClick={() => setMenuOpen(false)}>Let’s talk <span>↗︎</span></a>
@@ -169,7 +169,7 @@ function Portfolio() {
           <p className="p-kicker">ENTREPRENEUR · SYSTEMS BUILDER</p>
           <h1>I turn<br /><em>curiosity</em> into<br />working things.</h1>
           <p className="p-lede">I’m Niraj—an entrepreneur, systems builder, and lifelong learner. I build practical products, automation and software around problems worth understanding.</p>
-          <div className="p-hero-actions"><a className="p-button" href="#work">See selected work <span>↓</span></a><a className="p-quiet-link" href="https://www.linkedin.com/in/nirajv17/" target="_blank" rel="noreferrer">Follow the journey <span>↗︎</span></a></div>
+          <div className="p-hero-actions"><a className="p-button" href="#selected-work">See the work I’ve done <span>↓</span></a><a className="p-quiet-link" href="https://www.linkedin.com/in/nirajv17/" target="_blank" rel="noreferrer">Follow the journey <span>↗︎</span></a></div>
         </div>
         <div className="p-signal-card"><div className="p-signal-top"><span>NV / SIGNAL</span><span className="p-live"><i /> BUILDING</span></div><div className="p-signal-line"><i /><i /><i /><i /><i /><i /><i /></div><p>Products<br />Systems<br />Experiments</p><span className="p-signal-index">01—04</span></div>
       </section>
@@ -198,8 +198,47 @@ function Portfolio() {
   )
 }
 
+function SelectedWork() {
+  return (
+    <main className="portfolio p-work-page">
+      <header className="p-nav">
+        <a className="p-wordmark p-njx-wordmark" href="#top" aria-label="NJX home"><span>NJX<small>BUILT BY NIRAJ V</small></span></a>
+        <a className="p-contact-link p-work-back" href="#top">Back to home <span>↖︎</span></a>
+      </header>
+
+      <section className="p-work-page-main">
+        <div className="p-work-page-heading">
+          <p className="p-kicker">SELECTED WORK</p>
+          <h1>Things I’ve<br /><em>made real.</em></h1>
+          <p>Products, experiments and digital experiences shaped around practical problems and stronger first impressions.</p>
+        </div>
+
+        <div className="p-projects p-work-page-projects">
+          <article className="p-project p-project-ajx"><div className="p-project-meta"><span>01 / PRODUCT</span><span>AJX FITCLUB</span></div><div className="p-project-body"><p className="p-project-label">Building with movement in mind</p><h3>AJX<br />FitClub</h3><p>A technology-led fitness venture shaped around a better member experience and a modern digital presence.</p><span className="p-chip">FOUNDER</span></div><div className="p-project-symbol">A</div></article>
+          <article className="p-project p-project-radar"><div className="p-project-meta"><span>02 / SYSTEMS</span><span>PRIVATE RESEARCH</span></div><div className="p-project-body"><p className="p-project-label">Research before conviction</p><h3>Market<br />systems</h3><p>Exploring reliable data pipelines, automation and decision-support systems through careful, observation-first research.</p><span className="p-chip">PYTHON · DATA · AUTOMATION</span></div><div className="p-grid-art"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div></article>
+          <a className="p-project p-project-bella p-project-card-link" href="#bella-concept" aria-label="View Bella Family Salon and Spa concept"><div className="p-project-meta"><span>03 / WEB CONCEPT</span><span>BELLA</span></div><div className="p-project-body"><p className="p-project-label">A stronger first impression for a local business</p><h3>Bella<br />Salon &amp; Spa</h3><p>A branded, mobile-first salon website concept with service discovery and a considered appointment flow.</p><span className="p-project-link">View Bella concept <span>↗︎</span></span></div></a>
+          <article className="p-project p-project-local"><div className="p-project-meta"><span>04 / INITIATIVE</span><span>LOCAL BUSINESS DIGITAL</span></div><div className="p-project-body"><p className="p-project-label">Making local businesses easier to find</p><h3>Digital<br />presence.</h3><p>A growing collection of mobile-first websites and digital entry points for local businesses that deserve a stronger first impression.</p><span className="p-chip">WEB · BRAND · LEAD FLOW</span></div></article>
+          <article className="p-project p-project-rust"><div className="p-project-meta"><span>05 / LEARNING</span><span>RUST</span></div><div className="p-project-body"><p className="p-project-label">Learning by making</p><h3>Build,<br />then teach.</h3><p>Learning Rust through useful projects, clearer thinking and lessons worth carrying forward.</p><span className="p-chip">LEARNING IN PUBLIC</span></div></article>
+        </div>
+      </section>
+
+      <footer className="p-footer"><span>© 2026 NIRAJ V</span><span>NJX7.TECH</span><a href="#top">BACK TO TOP ↑</a></footer>
+    </main>
+  )
+}
+
 function App() {
-  return window.location.hash === '#bella-concept' ? <BellaConcept /> : <Portfolio />
+  const [hash, setHash] = useState(() => window.location.hash)
+
+  useEffect(() => {
+    const updateHash = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', updateHash)
+    return () => window.removeEventListener('hashchange', updateHash)
+  }, [])
+
+  if (hash === '#selected-work') return <SelectedWork />
+  if (hash.startsWith('#bella')) return <BellaConcept />
+  return <Portfolio />
 }
 
 createRoot(document.getElementById('root')).render(<App />)
