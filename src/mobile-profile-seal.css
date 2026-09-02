@@ -1,7 +1,7 @@
 @media(max-width:720px){
   .p-hero{display:flex;flex-direction:column;min-height:0;padding:20px 16px 36px}
-  .p-hero-portrait{display:block;position:relative;order:1;top:auto;right:auto;width:100%;height:300px;aspect-ratio:auto;margin:0 0 34px;border:6px solid var(--p-lime);border-radius:24px 24px 0 0;box-shadow:8px 8px 0 var(--p-coral);z-index:1}
-  .p-hero-portrait img{object-position:62% 54%;transform:scale(1.08);filter:brightness(1.08) saturate(.9) contrast(1.05)}
+  .p-hero-portrait{display:block;position:relative;order:1;top:auto;right:auto;width:100%;height:300px;aspect-ratio:auto;margin:0 0 34px;border:6px solid var(--p-lime);border-radius:24px 24px 0 0;box-shadow:8px 8px 0 var(--p-ink);z-index:1}
+  .p-hero-portrait img{object-position:61% 63%;transform:scale(1.52);filter:brightness(1.12) saturate(.88) contrast(1.08)}
   .p-hero-portrait figcaption{display:block;left:14px;bottom:13px;padding:5px 7px;background:var(--p-ink);color:var(--p-paper)}
   .p-hero-copy{order:2}
   .p-hero-copy .p-kicker{padding-right:0}
