@@ -50,3 +50,11 @@
   .p-cap-grid>div:before{left:26px}
 }
 @media(max-width:720px){.p-njx-wordmark{font-size:19px}.p-njx-wordmark small{font-size:6px}.p-hero-portrait{top:36px;right:-88px;width:315px}.p-hero-portrait:after{background:rgba(217,255,86,.68)}.p-about{display:block;padding-top:76px;padding-bottom:76px}.p-about-meta{padding:0;margin-bottom:34px}.p-about-meta>span{margin-top:12px}.p-about-content{display:block}.p-about-content h2{margin-bottom:28px}.p-about .p-about-content p{font-size:15px;max-width:340px}.p-project-local:after{font-size:110px;right:14px;bottom:15px}}
+
+/* Keep the capability markers on one precise editorial axis. */
+@media(max-width:720px){
+  .p-cap-grid>div:after{display:none}
+  .p-cap-grid>div:before{left:26px;top:38px;bottom:-25px}
+  .p-cap-grid>div>span{position:relative;display:block}
+  .p-cap-grid>div>span:after{content:'';position:absolute;left:23px;top:8px;width:6px;height:6px;border-radius:50%;background:var(--p-ink)}
+}
