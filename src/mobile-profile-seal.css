@@ -1,5 +1,5 @@
 @media(max-width:720px){
-  .p-hero-portrait{display:none}
-  .p-hero-copy .p-kicker{padding-right:0}
+  .p-hero-portrait{display:block;position:absolute;top:34px;right:16px;width:96px;height:96px;border:5px solid var(--p-lime);box-shadow:0 0 0 3px var(--p-ink);z-index:3}
+  .p-hero-copy .p-kicker{padding-right:112px}
   .p-hero-actions .p-quiet-link{padding-bottom:6px}
 }
