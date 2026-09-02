@@ -11,6 +11,7 @@
 .service-card button:hover{background:#fff;color:var(--ink);transform:translateY(-2px)}
 .service-card button span{font-size:12px;letter-spacing:0}
 .service-card button b{float:none;font:500 18px var(--serif)}
+.brand-mark{display:flex;align-items:center;justify-content:center;line-height:1;padding-bottom:2px}
 .experience-field{grid-column:1/-1;position:relative}
 .experience-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;border:0;border-bottom:1px solid #cfc2b4;background:transparent;color:var(--ink);padding:12px 0 9px;margin-top:4px;font:13px var(--sans);text-align:left;cursor:pointer}
 .experience-trigger b{font:500 20px/1 var(--sans);transition:transform .18s ease}
@@ -31,7 +32,7 @@
   .hero h1{font-size:59px;line-height:.92}
   .hero-text{font-size:15px;max-width:315px;margin:24px 0 30px}
   .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:auto}
-  .hero-actions .button,.hero-actions .text-link{width:auto;min-height:44px;display:inline-flex;align-items:center;justify-content:space-between;padding:0 14px}
+  .hero-actions .button,.hero-actions .text-link{width:184px;min-height:44px;display:inline-flex;align-items:center;justify-content:space-between;padding:0 14px}
   .hero-actions .button{font-size:12px}
   .hero-actions .button span,.hero-actions .text-link span{margin:0;line-height:1;font-size:18px}
   .hero-actions .text-link{font-size:12px;padding-bottom:0;line-height:1.3}
@@ -44,7 +45,7 @@
   .service-card.beauty{background-position:center 92%}
   .service-card h3{font-size:34px}
   .service-card p{font-size:12px;max-width:245px}
-  .service-card button{min-height:43px;padding:10px 12px;gap:18px}
+  .service-card button{width:184px;min-height:43px;padding:10px 12px;gap:18px}
   .signature{padding:78px 0 85px;gap:37px}
   .signature-art{padding:0;width:100%}
   .arch{width:100%;max-width:none;height:min(108vw,420px);padding:11px;border-radius:52vw 52vw 0 0}
