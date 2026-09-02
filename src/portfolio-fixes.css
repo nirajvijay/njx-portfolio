@@ -61,3 +61,4 @@
 
 /* Give the AJX FitClub lettering a little breathing room on narrow screens. */
 .p-project-ajx h3,.p-proof-lead h3{letter-spacing:-.02em;word-spacing:.04em;font-kerning:normal}
+@media(max-width:720px){.p-project-ajx h3,.p-proof-lead h3{line-height:.88}}
