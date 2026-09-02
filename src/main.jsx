@@ -120,7 +120,7 @@ function Portfolio() {
         <div className="p-orbit p-orbit-one" /><div className="p-orbit p-orbit-two" />
         <figure className="p-hero-portrait" aria-label="Portrait of Niraj V">
           <img src="/assets/niraj-portrait.png" alt="Niraj V" />
-          <figcaption>NV / IRL</figcaption>
+          <figcaption>NJ / IRL</figcaption>
         </figure>
         <div className="p-hero-copy">
           <p className="p-kicker">ENTREPRENEUR · SYSTEMS BUILDER</p>
