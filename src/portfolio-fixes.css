@@ -61,3 +61,8 @@
 
 /* Clear the J descender above FitClub at every viewport width. */
 .p-project-ajx h3{line-height:1.15;letter-spacing:-.02em;font-kerning:normal}
+
+/* Keep the Dental Square photograph readable on phones; desktop stays unchanged. */
+@media(max-width:720px){
+  .p-project.p-project-dental .p-project-body{margin-top:auto}
+}
