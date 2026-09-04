@@ -22,6 +22,7 @@
   .p-work-page-heading h1{font-size:59px}
   .p-work-page-heading>p:last-child{font-size:15px;margin-top:23px}
   .p-work-page-projects{grid-template-columns:1fr}
-  .p-project-dental{grid-column:auto;min-height:470px;background-position:69% center}
+  .p-project-dental{grid-column:auto;min-height:550px;background-position:69% center}
+  .p-project-dental h3{font-size:52px}
   .p-project-dental:before{background:linear-gradient(0deg,rgba(2,40,42,.96) 0%,rgba(3,47,49,.67) 48%,rgba(3,47,49,.12) 100%)}
 }
