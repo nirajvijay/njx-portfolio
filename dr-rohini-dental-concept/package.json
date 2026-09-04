@@ -1,11 +1,11 @@
 {
-  "name": "bella-family-salon-spa-demo",
+  "name": "dr-rohini-dental-square-concept",
   "private": true,
   "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm --prefix dr-rohini-dental-concept run build -- --outDir ../dist/dental-square --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -13,6 +13,5 @@
     "vite": "latest",
     "react": "latest",
     "react-dom": "latest"
-  },
-  "devDependencies": {}
+  }
 }

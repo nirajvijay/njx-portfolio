@@ -10,6 +10,11 @@
 .p-project-card-link{color:inherit;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
 .p-project-card-link:hover{transform:translateY(-5px);box-shadow:10px 10px 0 var(--p-ink)}
 .p-work-back{color:var(--p-ink);font-size:12px;text-decoration:none}
+.p-project-dental{grid-column:1/-1;min-height:540px;color:#fff;background:url('/assets/dental-square-preview.png') 62% 43%/cover no-repeat;isolation:isolate}
+.p-project-dental:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,40,42,.97) 0%,rgba(3,47,49,.83) 38%,rgba(3,47,49,.22) 72%,rgba(3,47,49,.08) 100%);z-index:-1}
+.p-project-dental .p-project-body{max-width:520px}
+.p-project-dental .p-project-body>p:not(.p-project-label){max-width:440px;color:rgba(255,255,255,.78)}
+.p-project-dental .p-project-link{color:#fff;border-color:rgba(255,255,255,.72)}
 
 @media(max-width:720px){
   .p-work-page-main{padding:76px 16px 82px}
@@ -17,4 +22,6 @@
   .p-work-page-heading h1{font-size:59px}
   .p-work-page-heading>p:last-child{font-size:15px;margin-top:23px}
   .p-work-page-projects{grid-template-columns:1fr}
+  .p-project-dental{grid-column:auto;min-height:470px;background-position:69% center}
+  .p-project-dental:before{background:linear-gradient(0deg,rgba(2,40,42,.96) 0%,rgba(3,47,49,.67) 48%,rgba(3,47,49,.12) 100%)}
 }
