@@ -26,3 +26,6 @@
   .p-project-dental h3{font-size:52px}
   .p-project-dental:before{background:linear-gradient(0deg,rgba(2,40,42,.96) 0%,rgba(3,47,49,.67) 48%,rgba(3,47,49,.12) 100%)}
 }
+.p-project-johny { background: #122846; color: #fff; }
+.p-project-johny .p-project-label, .p-project-johny .p-project-body > p { color: #ccd9ec; }
+.p-project-johny .p-project-link { color: #fff; }
